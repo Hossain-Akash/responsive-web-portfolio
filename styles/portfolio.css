@@ -173,21 +173,76 @@ footer input[type="text"], footer input[type="Email"], footer textarea{
 
 }
 
-/* responsive media query */
+/* responsive mobile media query */
 .hide{
     display: none;
 }
 @media screen and (max-width:576px) {
-      .skills-container, .resume-container, footer,.about-items{
+      .skills-container, 
+      .resume-container,
+      footer,.about-items,
+      .banner,
+      nav,
+      nav > ul{
         flex-direction: column;
       }
-      footer,.about{
+      .header{
+        background-image: none;
+      }
+
+      nav > ul{
+        gap: 20px;
+      }
+      .btn-primary{
+        margin-bottom: 10px;
+      }
+      .banner {
+        margin: 20px;
+      }
+
+      .banner-profile-pic{
+        /* border: 1px solid red; */
+        width: 100%;
+      }
+      
+
+      footer,
+      .about{
         padding: 20px;
       }
+
       .footer-column{
         width: 100%;
       }
-      footer input[type="text"], footer input[type="Email"], footer textarea{
+
+      footer input[type="text"], 
+      footer input[type="Email"],
+       footer textarea{
+        width: calc(100% - 40px);
+      }
+}
+
+/* Tab responsive */
+@media screen and (min-width: 576px) and (max-width:992px) {
+    nav, .banner,footer{
+        flex-direction: column;
+    }
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    footer,
+      .about{
+        padding: 20px;
+      }
+
+      .footer-column{
+        width: 100%;
+      }
+
+      footer input[type="text"], 
+      footer input[type="Email"],
+       footer textarea{
         width: calc(100% - 40px);
       }
 }
